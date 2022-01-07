@@ -9,3 +9,41 @@
 {% else %}
 <p>You have no products in your Frontpage collection</p>
 {% endfor %}
+
+<div id='textsection'>
+    <div class='simpletext'>
+        <h1> {{section.settings.text-box}} </h1>
+        <h3> {{section.settings.text} }</h3>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Text Box",
+    "settings": [
+        {
+            "id": "text-box",
+            "type": "text",
+            "label": "Heading",
+            "default": "Title"
+        },
+        {
+            "id": "text",
+            "type": "richtext",
+            "label": "Add custom text below",
+            "default": "<p>Add your text here</p>"
+        }
+    ]
+}
+{% endschema %}
+{% stylesheet %}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+
+
+
+{% endjavascript %}
